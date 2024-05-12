@@ -25,7 +25,7 @@ jobs:
           LESSONS: ${{ github.event.inputs.lessons }}
 
       - name: Notify on Discord
-        uses: Ilshidur/action-discord@v1
+        uses: Ilshidur/action-discord@master
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           message: 'The Duolingo lesson workflow has been completed. Lessons done: ${{ github.event.inputs.lessons }}'
