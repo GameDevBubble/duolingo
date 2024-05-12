@@ -23,10 +23,3 @@ jobs:
         env:
           DUOLINGO_JWT: ${{ secrets.DUOLINGO_JWT }}
           LESSONS: ${{ github.event.inputs.lessons }}
-
-      - name: Notify on Discord
-          uses: Ilshidur/action-discord@master
-          with:
-            args: "The Duolingo lesson workflow has been completed. Lessons done: ${{ github.event.inputs.lessons }}"
-          env:
-            DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
